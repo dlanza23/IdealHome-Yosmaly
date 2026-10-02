@@ -1,0 +1,1171 @@
+/* ==========================================================================
+   1. VARIABLES DE MARCA Y ESTILOS GLOBALES
+   ========================================================================== */
+:root {
+  --blue-dark: #002D62;    /* Azul institucional (Fondo principal) */
+  --blue-light: #00A3E0;   /* Cyan de acento (Detalles y bordes) */
+  --white: #ffffff;        /* Blanco puro para tarjetas */
+  --gray-light: #f8fafc;   /* Fondo sutil */
+  --text-dark: #1e293b;    /* Texto dentro de tarjetas */
+  --text-muted: #64748b;   /* Texto secundario */
+  --whatsapp-green: #25D366;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--blue-dark);
+  color: var(--text-dark);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bordes superiores decorativos en tarjetas y contenedores */
+.leader-profile, 
+.register-card, 
+.tabs-wrapper, 
+.video-row,
+.card {
+  border-top: 3px solid var(--blue-light);
+}
+
+
+/* ==========================================================================
+   2. TÍTULOS DE SECCIÓN REESTRUCTURADOS (BLANCOS Y CENTRADOS)
+   ========================================================================== */
+.section-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--blue-light) !important;
+  margin-bottom: 0.4rem;
+}
+
+.section-title, 
+.section-header h2 {
+  font-size: 2.2rem;
+  color: #ffffff !important; /* Blanco brillante garantizado */
+  font-weight: 800;
+  margin: 0;
+}
+
+.title-underline {
+  width: 60px;
+  height: 4px;
+  background-color: var(--blue-light);
+  margin-top: 0.6rem;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.section-header:hover .title-underline {
+  width: 100px;
+}
+
+
+/* ==========================================================================
+   3. HEADER FLOTANTE
+   ========================================================================== */
+.floating-header {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.header-content {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.brand-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-info img, 
+.mini-logo {
+  width: 120px;
+  height: 50px;
+  object-fit: contain;
+  background-color: var(--blue-dark);
+  border-radius: 12px;
+  padding: 4px 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-title {
+  font-size: 1.4rem;
+  color: var(--blue-dark);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.leader-badge {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #166534;
+}
+
+/* --- ADICIÓN: BOTONES DEBAJO DE LÍDER VIP --- */
+.leader-badge-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.header-auth-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+.auth-link {
+  font-size: 0.88rem; /* Tamaño más visible */
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.link-register {
+  color: var(--white);
+  background-color: var(--blue-light);
+}
+
+.link-register:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.link-login {
+  color: var(--blue-dark);
+  border: 1px solid var(--blue-dark);
+  background: transparent;
+}
+
+.link-login:hover {
+  background-color: var(--blue-dark);
+  color: var(--white);
+}
+
+.auth-divider {
+  display: none; /* Ya no hace falta la barra vertical al tener estilo de botón */
+}
+
+/* ==========================================================================
+   4. SECCIÓN HERO (FLECHAS E IDENTIDAD)
+   ========================================================================== */
+.hero-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  /* Ocupa el 85% de la altura visible del monitor */
+  min-height: calc(85vh - 70px); 
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente en la pantalla */
+}
+
+.hero-container {
+  width: 100%; /* Asegura que la rejilla ocupe todo el ancho disponible */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* Columna Izquierda: Flechas de Navegación */
+.hero-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* Reduce un poco el espacio interno entre flechas */
+  justify-content: center;
+}
+
+.nav-arrow {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.arrow-text {
+  background: var(--white);
+  color: #2d3748;
+  padding: 1rem 1.4rem;
+  border-radius: 12px 0 0 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-grow: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.arrow-head {
+  width: 0;
+  height: 0;
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;
+  border-left: 22px solid var(--white);
+  filter: drop-shadow(4px 0 3px rgba(0, 0, 0, 0.04));
+}
+
+.arrow-1 .arrow-text { border-left: 5px solid var(--blue-light); }
+.arrow-2 .arrow-text { border-left: 5px solid var(--whatsapp-green); }
+.arrow-3 .arrow-text { border-left: 5px solid #dd6b20; }
+
+.nav-arrow:hover {
+  transform: translateX(12px);
+}
+
+/* Columna Derecha: Tarjetas e Identidad */
+.hero-identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem; /* Espaciado compacto entre el marco del logo y la foto */
+}
+
+.main-logo-frame {
+  width: 100%;
+  max-width: 320px;
+  padding: 1rem;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-logo-frame img {
+  width: 100%;
+  max-height: 95px; /* Controla la altura de la tarjeta de productos */
+  object-fit: contain;
+  background-color: var(--blue-dark);
+  border-radius: 12px;
+  padding: 6px 10px;
+}
+
+.leader-profile {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem; /* Permite que el avatar respire sin empujar hacia abajo */
+}
+
+.avatar-container {
+  margin-top: -45px;
+  margin-bottom: 0.5rem;
+}
+
+.leader-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.leader-name {
+  font-size: 1.2rem;
+  color: var(--blue-dark);
+  margin: 0.2rem 0;
+}
+
+.leader-title {
+  display: inline-block;
+  background: #e0f2fe;
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 12px;
+  margin: 0.3rem 0 0.6rem 0;
+}
+
+.welcome-message {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* --- TEXTO ENCIMA DE LAS FLECHAS --- */
+.hero-welcome-text {
+  margin-bottom: 1.8rem;
+  color: var(--white);
+}
+
+.hero-tagline {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--blue-light);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.hero-main-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  color: var(--white);
+}
+
+.hero-description {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.4;
+  max-width: 420px;
+}
+
+
+/* ==========================================================================
+   5. SECCIÓN DE PLANES / TARJETAS (CON ESTADOS Y DESPLIEGUE)
+   ========================================================================== */
+.cards-section {
+  padding: 5rem 1rem 2.5rem 1rem; /* Empuja el título hacia abajo para que no asome al cargar */
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Tarjeta Base */
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 3px solid var(--blue-light);
+  flex: 1; /* Divide el espacio en 3 partes exactamente iguales */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Mantiene la estructura del contenido uniforme */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Ocultar elementos desplegables por defecto */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: none; /* Oculto hasta expandir */
+  font-weight: bold;
+}
+
+.card-details {
+  display: none; /* Oculto por defecto */
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.card-page {
+  display: none;
+  flex-direction: column;
+  align-items: stretch; /* Permite que los elementos usen el 100% del ancho */
+  justify-content: space-between;
+  min-height: 380px; /* Mantener la altura fija para evitar saltos */
+  padding: 1rem 0;
+}
+
+/* Estado activo de la página actual */
+.card-page.active {
+  display: flex;
+}
+
+/* Títulos centrados */
+.card-page h3,
+.card-page h4 {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+  color: var(--primary-color, #003366);
+  width: 100%;
+}
+
+/* Marco fijo para la imagen (centrada horizontalmente) */
+.card-page img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+/* Descripciones y párrafos alineados a la izquierda */
+.card-page p,
+.card-page ul,
+.card-page ol,
+.card-details p {
+  text-align: left; /* Alineación a la izquierda solicitada */
+  width: 100%;
+  min-height: 48px;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a5568;
+}
+
+/* Si usas listas con viñetas dentro de los detalles */
+.card-page ul,
+.card-page ol {
+  padding-left: 1.25rem;
+}
+
+/* Contenedor del paginador y botones inferior */
+.card-navigation,
+.page-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #edf2f7;
+}
+
+.card-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  color: #003366;
+}
+
+.nav-btn {
+  background: #e9ecef;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ESTADO EXPANDIDO (Activado mediante JavaScript) */
+.card.expanded {
+  flex: 1 1 100%;
+  width: 100%;
+  position: relative;
+}
+
+.card.expanded .close-btn,
+.card.expanded .card-details {
+  display: block; /* Muestra el contenido solo cuando la tarjeta tiene la clase .expanded */
+}
+
+.cards-container:has(.card.expanded) .card:not(.expanded) {
+  display: none;
+}
+
+.card-title{
+  text-align: center;
+}
+
+#centrar{
+  text-align: center;
+}
+
+/* --- AJUSTE DE IMÁGENES DENTRO DE LA TARJETA EXPANDIDA --- */
+.product-img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+  object-fit: contain;
+}
+
+/* ==========================================
+   SECCIÓN: BOTONES DE NAVEGACIÓN (ANTERIOR / SIGUIENTE)
+   ========================================== */
+
+/* Apunta directamente a los botones que cambian de página */
+button[onclick*="changePage"] {
+  background-color: #003366 !important; /* Fondo azul */
+  color: #ffffff !important;           /* Texto blanco */
+  border: none !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Cambio de color al pasar el cursor */
+button[onclick*="changePage"]:hover {
+  background-color: #002244 !important;
+}
+
+/* ==========================================
+   SECCIÓN: MINI SLIDER PREVIEW (TARJETA 1)
+   ========================================== */
+.mini-slider {
+  position: relative;
+  width: 100%;
+  height: 150px; /* Mayor altura para destacar los productos */
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Fondo claro neutro para enmarcar las fotos */
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.06);
+}
+
+.mini-slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mini-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 'contain' muestra el producto completo sin recortar marcas ni texto */
+  object-fit: contain; 
+  padding: 8px; /* Margen interno para no pegar la foto a los bordes */
+  opacity: 0;
+  transform: scale(0.95); /* Efecto sutil de zoom al aparecer */
+  transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out; /* Transición rápida */
+  border-radius: 12px;
+}
+
+/* Estado activo para la imagen visible */
+.mini-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Ocultar la vista previa si la tarjeta se expande */
+.card.expanded .mini-slider {
+  display: none;
+}
+
+/* ==========================================
+   TARJETA 2: CARTELERA DE PREMIOS Y ENFOQUE
+   ========================================== */
+
+.page-subtitle {
+  font-size: 0.88rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* --- CUADRÍCULA ESTILO CARTELERA DE CINE --- */
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  transition: all 0.3s ease;
+}
+
+/* Ficha de cada premio */
+.prize-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.prize-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.prize-thumb-wrapper {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.prize-thumb {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+.prize-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.4rem;
+}
+
+.prize-badge {
+  font-size: 0.75rem;
+  color: #0284c7;
+  font-weight: 600;
+}
+
+/* --- VISTA ENFOCADA / AMPLIADA DEL PREMIO --- */
+.prize-full-detail {
+  display: none; /* Oculta por defecto */
+}
+
+/* Cuando una ficha está enfocada (.focused) */
+.prizes-grid:has(.prize-card.focused) .prize-card:not(.focused) {
+  display: none; /* Oculta las demás fichas */
+}
+
+.prize-card.focused {
+  grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
+  width: 100%;
+  cursor: default;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  transform: none;
+  padding: 0;
+}
+
+/* Ocultar elementos de miniatura en modo enfocado */
+.prize-card.focused .prize-thumb-wrapper,
+.prize-card.focused .prize-title,
+.prize-card.focused .prize-badge {
+  display: none;
+}
+
+/* Mostrar panel extendido completo */
+.prize-card.focused .prize-full-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  animation: fadeIn 0.3s ease;
+}
+
+.back-to-grid-btn {
+  align-self: flex-start;
+  background: #e2e8f0;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.back-to-grid-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.prize-full-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.prize-full-img-container {
+  width: 100%;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.prize-full-img {
+  max-width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.prize-full-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+/* Contenedor flexible que se adapta al número de premios */
+.cartelera-grid, 
+.portfolio-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important; /* Centra los premios si hay menos de 4 */
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+/* Tarjeta individual con tamaño flexible pero consistente */
+.poster-card, 
+.portfolio-card-item {
+  flex: 1 1 120px !important; /* Crece y se encoge dinámicamente */
+  max-width: 140px !important; /* Ancho máximo para mantener la forma de tarjeta */
+  box-sizing: border-box !important;
+}
+
+/* --- CONTENEDOR DE VISTA PREVIA DE SLIDER (TARJETA CERRADA) --- */
+.preview-slider-container {
+  width: 100%;
+  height: 150px;
+  background-color: #f1f5f9; /* Fondo gris claro redondeado idéntico a Tarjeta 1 */
+  border-radius: 12px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.preview-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.preview-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.preview-slider img.active {
+  opacity: 1;
+}
+
+/* Oculta ÚNICAMENTE el cuadro con la imagen al expandir la tarjeta */
+.card.active .preview-slider-container,
+.card.expanded .preview-slider-container {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* ==========================================================================
+   6. FORMULARIO DE REGISTRO
+   ========================================================================== */
+.register-section {
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.4rem;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  background-color: var(--gray-light);
+  transition: all 0.25s ease;
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--whatsapp-green);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.15);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--whatsapp-green);
+  color: var(--white);
+  border: none;
+  padding: 0.9rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.submit-btn:hover {
+  background-color: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+}
+
+
+/* ==========================================================================
+   7. CENTRO DE VIDEOS Y PESTAÑAS (OPCIÓN A: SCROLL INTERNO)
+   ========================================================================== */
+.video-section {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column; /* Coloca el encabezado arriba y el contenido abajo */
+  align-items: center;    /* Centra el título y el subrayado */
+}
+
+.tabs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tabs-navigation {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-btn {
+  background: #f0f4f8;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tab-btn.active {
+  background-color: var(--blue-light) !important;
+  color: var(--white) !important;
+}
+
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.filter-wrapper select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Límite de altura y Scroll Interno para Videos */
+.tab-content {
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.tab-content.active {
+  display: flex;
+}
+
+/* Personalización de la barra de scroll */
+.tab-content::-webkit-scrollbar {
+  width: 6px;
+}
+.tab-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.tab-content::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 10px;
+}
+
+.video-row {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.video-media {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-media iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.video-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.tag-testimonio { background: #ebf8ff; color: #2b6cb0; }
+.tag-producto { background: #f0fdf4; color: #166534; }
+.tag-premio { background: #fefcbf; color: #744210; }
+
+.video-title {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin: 0;
+}
+
+.video-description {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.video-date {
+  font-size: 0.8rem;
+  color: #a0aec0;
+  margin-top: auto;
+}
+
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+.main-footer {
+  background-color: #001f44; /* Azul aún más oscuro para cierre visual */
+  color: #a0aec0;
+  padding: 1.8rem 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.copyright-text strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+
+/* ==========================================================================
+   9. ANIMACIONES Y DISEÑO RESPONSIVO (CELULARES)
+   ========================================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero-navigation { order: 2; }
+  .hero-identity { order: 1; }
+  
+  .cards-container {
+    flex-direction: column;
+  }
+  
+  .video-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabs-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .tabs-navigation {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 580px) {
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .full-width {
+    grid-column: span 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-header {
+    opacity: 1;
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+

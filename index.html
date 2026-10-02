@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IdealHome</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="floating-header">
+  <div class="header-content">
+    <div class="brand-info">
+      <img src="./src/logo-CQJNLDGg.png" alt="Ideal Logo">
+      <h1 class="brand-title">PRODUCTOS IDEAL</h1>
+    </div>
+    
+    <div class="leader-badge-group">
+      <div class="leader-badge">
+        <span class="badge-icon">🏆</span>
+        <span class="badge-text">Líder VIP: <strong>Yosmlay Quairo</strong></span>
+      </div>
+    </div>
+</header>
+<!--Sección de presentación-->
+<main class="hero-section">
+  <div class="hero-container">
+
+    <!-- Columna Izquierda: Menú de Flechas Interactivas -->
+    <div class="hero-navigation">  
+      <!-- TEXTO DE BIENVENIDA / PROPUESTA DE VALOR -->
+<div class="hero-welcome-text">
+  <span class="hero-tagline">ÚNETE A NUESTRO EQUIPO</span>
+  <h2 class="hero-main-title">Impulsa tus Ventas con Productos Ideal</h2>
+  <p class="hero-description">
+    Selecciona una opción para explorar los planes disponibles o registrarte como vendedor oficial.
+  </p>
+</div>    
+      <!-- Flecha 1 Conecta con la sección de Planes-->
+      <a href="#cards-section" class="nav-arrow arrow-1">
+        <span class="arrow-text">Ver Planes e Información</span>
+        <div class="arrow-head"></div>
+      </a>
+
+      <!-- Flecha 2: Conecta con el Formulario de Registro -->
+      <a href="#register-section" class="nav-arrow arrow-2">
+        <span class="arrow-text">Registro de Vendedores</span>
+        <div class="arrow-head"></div>
+      </a>
+
+      <!-- Flecha 3: Conecta con el Centro de Videos/Testimonios -->
+      <a href="#testimonials-section" class="nav-arrow arrow-3">
+        <span class="arrow-text">Ver Testimonios</span>
+        <div class="arrow-head"></div>
+      </a>
+    </div>
+
+    <!-- Columna Derecha: Identidad de la Marca y Líder -->
+    <div class="hero-identity">
+      
+      <!-- Logo Principal -->
+      <div class="main-logo-frame">
+        <div class="logo-placeholder">
+          <h2>PRODUCTOS IDEAL</h2>
+          <p style="color: #718096; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; font-weight: 600;">Oficial</p>
+          <img src="./src/logo-CQJNLDGg.png" alt="Logo ideak">
+        </div>
+      </div>
+
+      <!-- Tarjeta Perfil de la Líder -->
+      <div class="leader-profile">
+        <div class="avatar-container">
+          <!-- Reemplaza src con la foto real de Yosmlay -->
+          <img src="./src/perfil.png" alt="Yosmlay Quairo" class="leader-avatar">
+        </div>
+        <h2 class="leader-name">Yosmlay Quairo</h2>
+        <span class="leader-title">Representnte de ventas de la marca IdealHome en Clarines - Bruzual - Anzoátegui</span>
+        <p class="welcome-message">
+          "¡Bienvenido a nuestro equipo! Construyamos juntos tu éxito y el crecimiento de tu negocio."
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+<!--Tarjetas-->
+<section class="cards-section" id="cards-section">
+
+  <div class="section-header">
+    <span class="section-subtitle">Oportunidades y Beneficios</span>
+    <h2 class="section-title">Conoce Nuestros Planes</h2>
+    <div class="title-underline"></div>
+  </div>
+
+  <div class="cards-container">
+
+  <!-- Tarjeta 1 -->
+  <article class="card" onclick="expandCard(this)">
+    <button class="close-btn" onclick="closeCard(event, this)">✕</button>
+  
+    <!-- Vista resumida (inicial) -->
+    <div class="card-summary">
+      <h2 class="card-title">Conoce nuestros productos</h2>
+      <p class="card-badge">Cargando producto...</p>
+      <p class="card-preview">Haz clic para ver todos nuestros productos IDEAL...</p>
+    </div>
+
+    <!-- Vista expandida (contenido completo) -->
+    <div class="card-details">
+    
+    <!-- PÁGINA 1: JABÓN AZUL -->
+    <div class="card-page active">
+      <h3>Jabón Azul 250 gr</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/JABON AZUL.jpg" alt="Jabón azul 250 gr" class="product-img">
+      </div>
+      <p id="cent">Jabón azul multiuso de 250 gr para limpieza profunda y cuidado textil.</p>
+    </div>
+
+    <!-- PÁGINA 2: JABÓN LÍQUIDO MULTIUSO -->
+    <div class="card-page">
+      <h3>Jabón Líquido Multiuso 400ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/JABON LIQUIDO MULTIUSOS.jpg" alt="Jabón líquido multiuso 400ml" class="product-img">
+      </div>
+      <p>Fórmula concentrada para la limpieza eficaz de diversas superficies del hogar.</p>
+    </div>
+
+    <!-- PÁGINA 3: DETERGENTE ROSITA -->
+    <div class="card-page">
+      <h3>Detergente Rosita 400ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/ROSITA.jpg" alt="Detergente rosita 400ml" class="product-img">
+      </div>
+      <p>Cuidado delicado y aroma fresco para tus prendas en formato líquido de 400ml.</p>
+    </div>
+
+    <!-- PÁGINA 4: DETERGENTE EN POLVO 3 EN 1 -->
+    <div class="card-page">
+      <h3>Detergente en Polvo 3 en 1 400g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/DTERGENTE 3 EN 1.jfif" alt="Detergente en polvo 3 en 1 400g" class="product-img">
+      </div>
+      <p>Lava, remueve manchas y perfuma en un solo ciclo de lavado.</p>
+    </div>
+
+    <!-- PÁGINA 5: JABÓN FACIAL DE GLICERINA -->
+    <div class="card-page">
+      <h3>Jabón Facial de Glicerina 100g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/JABON DE GLICERINA.jfif" alt="Jabón facial de glicerina 100g" class="product-img">
+      </div>
+      <p>Limpieza suave e hidratante ideal para el cuidado diario del rostro.</p>
+    </div>
+
+    <!-- PÁGINA 6: JABÓN FACIAL DE AZUFRE -->
+    <div class="card-page">
+      <h3>Jabón Facial de Azufre 100g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/JABON DE AZUFRE.jfif" alt="Jabón facial de azufre 100g" class="product-img">
+      </div>
+      <p>Tratamiento purificante que ayuda a controlar el exceso de grasa e impurezas.</p>
+    </div>
+
+    <!-- PÁGINA 7: CHAMPÚ -->
+    <div class="card-page">
+      <h3>Champú 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/CHAMPU.jfif" alt="Champú 295ml" class="product-img">
+      </div>
+      <p>Limpieza y brillo para todo tipo de cabello con fórmula enriquecida.</p>
+    </div>
+
+    <!-- PÁGINA 8: JABÓN DE TOCADOR -->
+    <div class="card-page">
+      <h3>Jabón de Tocador 113g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/JABON DE TOCADOR.jfif" alt="Jabón de tocador 113g" class="product-img">
+      </div>
+      <p>Pastilla de jabón suave con fragancia duradera para la higiene corporal diaria.</p>
+    </div>
+
+    <!-- PÁGINA 9: DESODORANTE ANTITRANSPIRANTE -->
+    <div class="card-page">
+      <h3>Desodorante Antitranspirante 50g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/DESODORANTE.jfif" alt="Desodorante antitranspirante 50g" class="product-img">
+      </div>
+      <p>Protección continua contra el sudor y el mal olor durante todo el día.</p>
+    </div>
+
+    <!-- PÁGINA 10: CREMA DENTAL -->
+    <div class="card-page">
+      <h3>Crema Dental 100g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/CREMA DENTAL.jfif" alt="Crema dental 100g" class="product-img">
+      </div>
+      <p>Protección anticaries y frescura duradera para la salud bucal.</p>
+    </div>
+
+    <!-- PÁGINA 11: IDEAL ALIVIO -->
+    <div class="card-page">
+      <h3>Ideal Alivio 12g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/IDEAL ALIVIO.jfif" alt="Ideal alivio 12g" class="product-img">
+      </div>
+      <p>Bálsamo reconfortante de acción rápida para zonas localizadas.</p>
+    </div>
+
+    <!-- PÁGINA 12: CONCENTRADOS MARAVILLOSOS -->
+    <div class="card-page">
+      <h3>Concentrados Maravillosos 200ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/CONCENTRADOS.jfif" alt="Concentrados maravillosos 200ml" class="product-img">
+      </div>
+      <p>Fórmula concentrada multipropósito para máxima rendición y limpieza.</p>
+    </div>
+
+    <!-- PÁGINA 13: PROTECTOR SOLAR -->
+    <div class="card-page">
+      <h3>Protector Solar 50g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/PROTECTOR SOLAR.webp" alt="Protector solar 50g" class="product-img">
+      </div>
+      <p>Protección contra rayos UVA/UVB con textura ligera de rápida absorción.</p>
+    </div>
+
+    <!-- PÁGINA 14: CREMA CORPORAL -->
+    <div class="card-page">
+      <h3>Crema Corporal 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/CREMA CORPORAL.jfif" alt="Crema corporal 295ml" class="product-img">
+      </div>
+      <p>Hidratación profunda que deja la piel suave y nutrida durante horas.</p>
+    </div>
+
+    <!-- PÁGINA 15: ALISADO ORGÁNICO -->
+    <div class="card-page">
+      <h3>Alisado Orgánico 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/ALISADO.jfif" alt="Alisado orgánico 295ml" class="product-img">
+      </div>
+      <p>Tratamiento capilar con ingredientes naturales para controlar el encrespamiento.</p>
+    </div>
+
+    <!-- PÁGINA 16: JABÓN ÍNTIMO FEMENINO -->
+    <div class="card-page">
+      <h3>Jabón Íntimo Femenino 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/JABON INTIMO.jfif" alt="Jabón íntimo femenino 295ml" class="product-img">
+      </div>
+      <p>Higiene delicada con pH balanceado para la zona íntima.</p>
+    </div>
+
+    <!-- PÁGINA 17: ÁRNICA -->
+    <div class="card-page">
+      <h3>Árnica 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/ARNICA.webp" alt="Árnica 295ml" class="product-img">
+      </div>
+      <p>Gel/Loción enriquecida con extracto de árnica para masajes relajantes.</p>
+    </div>
+
+    <!-- PÁGINA 18: GEL FACIAL -->
+    <div class="card-page">
+      <h3>Gel Facial 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/GEL FACIAL.jfif" alt="Gel facial 295ml" class="product-img">
+      </div>
+      <p>Limpiador facial fluido que remueve impurezas respetando la barrera cutánea.</p>
+    </div>
+
+    <!-- PÁGINA 19: ACONDICIONADOR -->
+    <div class="card-page">
+      <h3>Acondicionador 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/ACONDICIONADOR.jfif" alt="Acondicionador 295ml" class="product-img">
+      </div>
+      <p>Desenredo instantáneo y suavidad extrema para complementar tu lavado capilar.</p>
+    </div>
+
+    <!-- PÁGINA 20: CHAMPÚ DE NIÑOS -->
+    <div class="card-page">
+      <h3>Champú de Niños 295ml</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/CHAMPU DE NIÑOS.jfif" alt="Champú de niños 295ml" class="product-img">
+      </div>
+      <p>Fórmula suave e hipoalergénica sin lágrimas, diseñada para la limpieza y cuidado del cabello infantil.</p>
+    </div>
+
+    <!-- PÁGINA 21: CREMA DENTAL DE NIÑOS -->
+    <div class="card-page">
+      <h3>Crema Dental de Niños 100g</h3>
+      <div class="product-image-container">
+        <img src="./src/PRODUCTOS/CREMA DENTAL DE NIÑOS.jfif" alt="Crema dental de niños 100g" class="product-img">
+      </div>
+      <p>Protección suave contra las caries con un agradable sabor adaptado para la higiene bucal de los más pequeños.</p>
+    </div>
+
+    <!-- Paginador interno -->
+    <div class="card-pagination">
+      <button class="nav-btn" onclick="changePage(event, this, -1)">❮ Anterior</button>
+      <span class="page-indicator">Página 1 de 21</span>
+      <button class="nav-btn" onclick="changePage(event, this, 1)">Siguiente ❯</button>
+    </div>
+
+  </div>
+    <!-- Mini Slider de Vista Previa (Insertar dentro de la Tarjeta 1) -->
+<div class="mini-slider">
+  <div class="mini-slider-track">
+    <img src="./src/PRODUCTOS/JABON AZUL.jpg"" alt="Producto 1" class="mini-slide active">
+    <img src="./src/PRODUCTOS/ARNICA.webp" alt="Producto 2" class="mini-slide">
+    <img src="./src/PRODUCTOS/JABON LIQUIDO MULTIUSOS.jpg" alt="Producto 3" class="mini-slide">
+    <img src="./src/PRODUCTOS/PROTECTOR SOLAR.webp" alt="Producto 4" class="mini-slide">
+    <img src="./src/PRODUCTOS/ROSITA.jpg" alt="Producto 5" class="mini-slide">
+    <img src="./src/PRODUCTOS/ACONDICIONADOR.jfif" alt="Producto 6" class="mini-slide">
+    <img src="./src/PRODUCTOS/ALISADO.jfif" alt="Producto 7" class="mini-slide">
+    <img src="./src/PRODUCTOS/CHAMPU DE NIÑOS.jfif" alt="Producto 8" class="mini-slide">
+    <img src="./src/PRODUCTOS/CHAMPU.jfif" alt="Producto 9" class="mini-slide">
+    <img src="./src/PRODUCTOS/CONCENTRADOS.jfif" alt="Producto 10" class="mini-slide">
+    <img src="./src/PRODUCTOS/CREMA CORPORAL.jfif" alt="Producto 11" class="mini-slide">
+    <img src="./src/PRODUCTOS/CREMA DENTAL DE NIÑOS.jfif" alt="Producto 12" class="mini-slide">
+    <img src="./src/PRODUCTOS/CREMA DENTAL.jfif" alt="Producto 13" class="mini-slide">
+    <img src="./src/PRODUCTOS/JABON INTIMO.jfif" alt="Producto 14" class="mini-slide">
+    <img src="./src/PRODUCTOS/JABON DE TOCADOR.jfif" alt="Producto 15" class="mini-slide">
+    <img src="./src/PRODUCTOS/JABON DE GLICERINA.jfif" alt="Producto 16" class="mini-slide">
+    <img src="./src/PRODUCTOS/JABON DE AZUFRE.jfif"alt="Producto 17" class="mini-slide">
+    <img src="./src/PRODUCTOS/IDEAL ALIVIO.jfif" alt="Producto 18" class="mini-slide">
+    <img src="./src/PRODUCTOS/GEL FACIAL.jfif" alt="Producto 19" class="mini-slide">
+    <img src="./src/PRODUCTOS/DTERGENTE 3 EN 1.jfif" alt="Producto 20" class="mini-slide">
+    <img src="./src/PRODUCTOS/DESODORANTE.jfif" alt="Producto 21" class="mini-slide">
+  </div>
+</div>
+</article>
+
+<!-- TARJETA 2: PREMIOS -->
+<article class="card" onclick="expandCard(this)">
+  <button class="close-btn" onclick="closeCard(event, this)">✕</button>
+
+  <!-- Vista resumida (inicial) -->
+  <div class="card-summary">
+<h2 class="card-title">Equipa tu hogar con nuestros premios</h2>
+  <p class="card-badge" id="prize-badge">Premios del Mes</p>
+  <p class="card-preview">Haz clic para ver la política y el catálogo de premios de este mes...</p>
+
+  <!-- SLIDER DE VISTA PREVIA (IGUAL AL DE LA TARJETA 1) -->
+  <div class="preview-slider-container">
+    <div class="preview-slider" id="prizes-preview-slider">
+      <img src="./src/PREMIOS/MIN/SET DE CUCHILLOS.jfif" alt="Premio 1" class="active">
+      <img src="./src/PREMIOS/MID/BARRA DE SONIDO.jpg" alt="Premio 2">
+      <img src="./src/PREMIOS/MAX/MINI PROYECTOR.jpg" alt="Premio 3">
+      <img src="./src/PREMIOS/UNI/GENERADOR ELECTRICO.jpg" alt="Premio 4">
+    </div>
+  </div>
+
+  <!-- Vista extendida (al hacer clic) -->
+  <div class="card-details">
+    
+    <!-- PÁGINA 1: Políticas de Pago Puntual -->
+    <div class="card-page active">
+      <h3>Políticas de Pago Puntual</h3>
+      <p class="policy-intro">Gana premios semanales manteniendo tus cuentas al día. La puntualidad es la clave para desbloquear las colecciones completas.</p>
+      
+      <div class="policy-rules">
+        <div class="rule-item">
+          <strong>📅 Modalidad Semanal:</strong>
+          <p>Cada colección consta de 4 premios (1 premio por cada semana cumplida a tiempo).</p>
+        </div>
+        <div class="rule-item">
+          <strong>⭐ Premio Único:</strong>
+          <p>Opción de optar por un premio único de mayor valor monetario al cumplir el ciclo completo.</p>
+        </div>
+        <div class="rule-item alert">
+          <strong>⚠️ Condición de Entrega:</strong>
+          <p>Si el vendedor no realiza el pago en la fecha estipulada de la semana, <strong>pierde el premio correspondiente a esa semana</strong>. (El pago adeudado debe reponerse obligatoriamente).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÁGINA 2: Premios Pequeños -->
+    <div class="card-page">
+      <h3>Premios Pequeños</h3>
+      <p class="page-subtitle">Haz clic en cualquier premio para ver sus detalles completos.</p>
+      
+      <div class="prizes-grid">
+        <!-- Premio 1 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/SET DE CUCHILLOS.jfif" alt="Premio Pequeño 1" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">SET DE CUCHILLOS</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">SET DE CUCHILLOS</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/SET DE CUCHILLOS.jfif" alt="Premio Pequeño 1" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Juego de cuchillos de cocina con hojas de acero de alta precisión y mangos ergonómicos, acompañados de su bloque organizador o estuche.</p>
+          </div>
+        </div>
+
+        <!-- Premio 2 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/SET DE BAÑO.jpg" alt="Premio Pequeño 2" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">SET DE BAÑO</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">SET DE BAÑO</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/SET DE BAÑO.jpg" alt="Premio Pequeño 1" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Conjunto decorativo y funcional para el baño que incluye dispensador de jabón, portacepillos y accesorios organizadores a juego.</p>
+          </div>
+        </div>
+
+        <!-- Premio 3 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/SOMBRILLA PLAYERA.jfif" alt="Premio Pequeño 3" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">SOMBRILLA PLAYERA</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">SOMBRILLA PLAYERA</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/SOMBRILLA PLAYERA.jfif" alt="Premio Pequeño 3" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Parasol portátil de amplia cobertura con protección UV y estructura ligera, fácil de anclar en la arena para días de playa o piscina.</p>
+          </div>
+        </div>
+
+        <!-- Premio 4 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/JUEGO DE VASOS.jpg" alt="Premio Pequeño 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">JUEGO DE VASOS</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">JUEGO DE VASOS</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/JUEGO DE VASOS.jpg" alt="Premio Pequeño 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Set de cristalería fina y resistente para el uso diario o reuniones, perfecto para servir agua, jugos y bebidas variadas.</p>
+          </div>
+        </div>
+        
+        <!-- Premio 5 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/SISTEMA DE CABELLO ONDULADOR.jpg" alt="Premio Pequeño 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">SISTEMA DE CABELLO: ONDULADOR</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">SISTEMA DE CABELLO: ONDULADOR</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/SISTEMA DE CABELLO ONDULADOR.jpg" alt="Premio Pequeño 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Rizador eléctrico inteligente en tono menta que moldea rizos y ondas de forma rápida, práctica y sin enredos.</p>
+          </div>
+        </div>
+
+        <!-- Premio 6 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/JUEGO DE CUBIERTOS.jpg" alt="Premio Pequeño 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">JUEGO DE CUBIERTOS</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">JUEGO DE CUBIERTOS</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/JUEGO DE CUBIERTOS.jpg" alt="Premio Pequeño 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Set esencial de cubiertos de acero inoxidable de alta durabilidad, incluye tenedores, cuchillos, cucharas soperas y cucharitas de postre.</p>
+          </div>
+        </div>
+
+        <!-- Premio 7 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/CALENTADOR DE CERA.jpg" alt="Premio Pequeño 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">CALENTADOR DE CERA</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">CALENTADOR DE CERA</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/CALENTADOR DE CERA.jpg" alt="Premio Pequeño 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Fundidor eléctrico compacto tipo Idealhome con control de temperatura ajustable y tapa protectora. Ideal para depilación rápida en casa con acabado profesional.</p>
+          </div>
+        </div>
+
+        <!-- Premio 8 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MIN/DULCERA.jpg" alt="Premio Pequeño 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">DULCERA</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">DULCERA</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MIN/DULCERA.jpg" alt="Premio Pequeño 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Elegante juego de recipientes/copas de cristal acanalado sobre base estilizada. Diseñado para servir postres, aperitivos o lucir como pieza decorativa en la mesa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÁGINA 3: Premios Medianos -->
+  <div class="card-page">
+      <h3>Premios Medianos</h3>
+      <p class="page-subtitle">Haz clic en cualquier premio para ver sus detalles completos.</p>
+      
+      <div class="prizes-grid">
+      <!-- Premio 1 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/RELOJ Y AUDIFONOS.jfif" alt="Premio Mediano 1" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">RELOJ Y AUDIFONOS</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">RELOJ Y AUDIFONOS</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/RELOJ Y AUDIFONOS.jfif" alt="Premio Mediano 1" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Combo tecnológico que combina un smartwatch con monitor de actividad y correa deportiva junto a audífonos inalámbricos estéreo en estuche de carga.</p>
+          </div>
+      </div>
+
+        <!-- Premio 2 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/COBIJA.jfif" alt="Premio Mediano 2" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">COBIJA</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">cOBIJA</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/COBIJA.jfif" alt="Premio Mediano 2" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Manta/cobija térmica de textura ultrasuave, diseñada para brindar máximo confort y abrigo en habitaciones o salas de estar.</p>
+          </div>
+      </div>
+
+        <!-- Premio 3 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/CARPA PLAYERA.jfif" alt="Premio Mediano 3" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">CARPA PLAYERA</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">CARPA PLAYERA</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/CARPA PLAYERA.jfif" alt="Premio Mediano 3" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Toldo armable e impermeable para exteriores, brinda sombra y protección térmica ideal para salidas a la playa, montaña o campamentos.</p>
+          </div>
+        </div>
+
+      <!-- Premio 4 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/SISTEMA DE CABELLO  CS.jpg" alt="Premio Mediano 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">SISTEMA DE CABELLO: CEPILLOS SECADOR</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">SISTEMA DE CABELLO: CEPILLOS SECADOR</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/SISTEMA DE CABELLO  CS.jpg" alt="Premio Mediano 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Cepillo voluminizador y secador multifunción de gran potencia, diseñado para secar, peinar y dar volumen al cabello en un solo paso.</p>
+          </div>
+      </div>
+
+      <!-- Premio 5 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/SET PARRILLERO.jpg" alt="Premio Mediano 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">SET PARRILLERO</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">SET PARRILLERO</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/SET PARRILLERO.jpg" alt="Premio Mediano 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Maletín metálico de aluminio que incluye utensilios profesionales de acero inoxidable (espátula, pinzas, tenedor y brocha) para asados y barbacoas.</p>
+          </div>
+      </div>
+
+      <!-- Premio 6 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/SBANAS.jpg" alt="Premio Mediano 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">JUEGO DE SABANAS</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">JUEGO DE SABANAS</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/SBANAS.jpg" alt="Premio Mediano 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Juego completo de sábanas confeccionado en tela suave y fresca, incluye sábana plana, ajustable y fundas de almohada a juego.</p>
+          </div>
+      </div>
+
+      <!-- Premio 7 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/HIDROJET.jpg" alt="Premio Mediano 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">HIDROJET</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">HIDROJET</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/HIDROJET.jpg" alt="Premio Mediano 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Lavadora a presión con maletín de transporte, manguera, boquillas ajustables y batería recargable para limpieza profunda de vehículos y exteriores.</p>
+          </div>
+      </div>
+
+      <!-- Premio 8 -->
+      <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MID/BARRA DE SONIDO.jpg" alt="Premio Mediano 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">BARRA DE SONIDO</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">BARRA DE SONIDO</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MID/BARRA DE SONIDO.jpg" alt="Premio Mediano 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Sistema de audio compacto con conectividad Bluetooth, sonido envolvente y bajos reforzados para potenciar la experiencia al ver TV o escuchar música.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- PÁGINA 4: Premios Grandes -->
+    <div class="card-page">
+      <h3>Premios Grandes</h3>
+      <p class="page-subtitle">Haz clic en cualquier premio para ver sus detalles completos.</p>
+      
+      <div class="prizes-grid">
+        <!-- Premio 1 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MAX/SISTEMA DE CABELLO.jpg" alt="Premio Grande 1" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">SISTEMA DE CABELLO: CEPILLO ALISADOR</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">SISTEMA DE CABELLO: CEPILLO ALISADOR</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MAX/SISTEMA DE CABELLO.jpg" alt="Premio Grande 1" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Cepillo térmico diseñado para moldear, alisar y controlar el encrespamiento rápidamente con acabado suave y brillante.</p>
+          </div>
+        </div>
+
+        <!-- Premio 2 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MAX/MINI PROYECTOR.jpg" alt="Premio Grande 2" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">MINI PROYECTOR</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">MINI PROYECTOR</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MAX/MINI PROYECTOR.jpg" alt="Premio Grande 2" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Proyector portátil LED con conectividad múltiple (HDMI/USB/Wireless), ideal para crear una experiencia de cine en casa en cualquier superficie.</p>
+          </div>
+        </div>
+
+        <!-- Premio 3 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MAX/JUEGO DE OLLAS.jpg" alt="Premio Grande 3" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">JUEGO DE OLLAS</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">JUEGO DE OLLAS</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MAX/JUEGO DE OLLAS.jpg" alt="Premio Grande 3" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Batería de cocina en acero inoxidable y revestimiento antiadherente con tapas de vidrio templado, óptima para todo tipo de preparaciones.</p>
+          </div>
+        </div>
+
+        <!-- Premio 4 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/MAX/HORNO ELECTRICO.jpg" alt="Premio Grande 4" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">HORNO ELÉCTRICO</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">HORNO ELÉCTRICO</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/MAX/HORNO ELECTRICO.jpg" alt="Premio Grande 4" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Horno de mesa con temporizador y ajuste de temperatura, ideal para hornear, calentar y dorar alimentos en poco tiempo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÁGINA 5: Premios Únicos por Colección -->
+    <div class="card-page">
+      <h3>Premios Únicos por Colección</h3>
+      <p class="page-subtitle">Haz clic en cualquier premio para ver sus detalles completos.</p>
+      
+      <div class="prizes-grid">
+        <!-- Premio Único 1 -->
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/UNI/GENERADOR ELECTRICO.jpg" alt="Premio Único 1" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">GENERADOR ELÉCTRICO</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">GENERADOR ELÉCTRICO</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/UNI/GENERADOR ELECTRICO.jpg" alt="Premio Único 1" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Generador portátil a gasolina de alta capacidad, indispensable para respaldar la energía eléctrica del hogar o negocio.</p>
+          </div>
+        </div>
+
+        <!-- Premio Único 2 
+        <div class="prize-card" onclick="openPrizeDetail(this, event)">
+          <div class="prize-thumb-wrapper">
+            <img src="./src/PREMIOS/unico-2.png" alt="Premio Único 2" class="prize-thumb">
+          </div>
+          <h4 class="prize-title">Premio Único Opción B</h4>
+          <span class="prize-badge">Ver detalle</span>
+
+          <div class="prize-full-detail">
+            <button class="back-to-grid-btn" onclick="closePrizeDetail(this, event)">← Volver a la Galería</button>
+            <h4 class="prize-full-title">Premio Único Opción B - Colección Completa</h4>
+            <div class="prize-full-img-container">
+              <img src="./src/PREMIOS/unico-2.png" alt="Premio Único 2" class="prize-full-img">
+            </div>
+            <p class="prize-full-desc">Segunda opción de premio de alto valor para elegir al finalizar las 4 semanas a tiempo.</p>
+          </div>
+        </div>-->
+      </div>
+    </div>
+
+    <!-- Paginación dinámica -->
+    <div class="card-pagination">
+      <button class="nav-btn" onclick="changePage(event, this, -1)">❮ Anterior</button>
+      <span class="page-indicator">Página 1 de 5</span>
+      <button class="nav-btn" onclick="changePage(event, this, 1)">Siguiente ❯</button>
+    </div>
+
+  </div>
+</article>
+
+<!-- Tarjeta 3: Cómo vas a ganar / Plan de Crecimiento -->
+<article class="card" onclick="expandCard(this)">
+  <button class="close-btn" onclick="closeCard(event, this)">✕</button>
+
+  <!-- Vista resumida (Inicial) -->
+  <div class="card-summary">
+    <h2 class="card-title">Cómo vas a ganar</h2>
+    <p class="card-badge">Comisiones y Niveles</p>
+    <p class="card-preview">Haz clic para conocer el plan de ganancias, niveles de progresión y comisión élite.</p>
+    
+    <div class="preview-slider-container">
+      <div class="preview-slider" id="combos-preview-slider">
+        <img src="./src/COMBOS/products.jfif" alt="Combo 1" class="active">
+        <img src="./src/COMBOS/1v2.png" alt="Combo 2">
+        <img src="./src/COMBOS/D_NQ_NP_726529-MLV99228616389_112025-O.webp" alt="Combo 3">
+        <img src="./src/COMBOS/D_NQ_NP_857475-MLV112592545037_062026-O.webp" alt="Combo 4">
+        <img src="./src/COMBOS/coleccion.jfif" alt="Combo 5">
+      </div>
+    </div>
+  </div>
+
+  <!-- Vista extendida -->
+  <div class="card-details">
+    
+    <div class="card-header-fixed">
+      <h3 id="centrar">Plan de Ganancias y Progresión</h3>
+    </div>
+
+    <!-- PÁGINA 1: REGLAS DE TRABAJO Y NIVELES INICIALES -->
+    <div class="card-page active">
+      <h4 style="margin-top: 0; margin-bottom: 8px; color: #1e3a8a;">Reglas y Condiciones de Trabajo</h4>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+        <div style="flex: 1; min-width: 200px; background: #f8fafc; padding: 10px 12px; border-radius: 8px;">
+          <h5 style="margin-top: 0; margin-bottom: 4px; color: #0f172a;">📌 Condiciones de Inicio</h5>
+          <ul style="padding-left: 18px; margin: 0; font-size: 0.85rem; line-height: 1.35;">
+            <li><strong>Sin inversión:</strong> Comienza sin adelanto inicial.</li>
+            <li><strong>Cronograma:</strong> 4 pagos al mes (1 semanal).</li>
+            <li><strong>Valor Base:</strong> Transparencia en precios y abonos.</li>
+          </ul>
+        </div>
+        <div style="flex: 1; min-width: 200px; background: #f8fafc; padding: 10px 12px; border-radius: 8px;">
+          <h5 style="margin-top: 0; margin-bottom: 4px; color: #0f172a;">💡 Dinámica Semanal</h5>
+          <p style="margin: 0; font-size: 0.85rem; line-height: 1.35;">Cumplir las fechas de pago garantiza habilitar los premios semanales y el acceso directo a los siguientes niveles de comisión. Los premios pueden agotarse según la existencia que maneje la empresa pagar a tiempo asegura los mejores premios</p>
+        </div>
+      </div>
+
+      <h4 style="margin-top: 0; margin-bottom: 8px; color: #1e3a8a;">🚀 Niveles Iniciales</h4>
+      <div style="display: flex; gap: 10px;">
+        <div style="flex: 1; background: #f8fafc; padding: 10px; border-radius: 8px;">
+          <h5 style="margin: 0 0 4px 0; color: #1e3a8a;">1. Vendedor Nuevo</h5>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Volumen:</strong> 1/4 colección</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Ganancia:</strong> Dividida ÷ 4</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Premios:</strong> 1 premio</p>
+        </div>
+        <div style="flex: 1; background: #f8fafc; padding: 10px; border-radius: 8px;">
+          <h5 style="margin: 0 0 4px 0; color: #1e3a8a;">2. Experimentado</h5>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Volumen:</strong> 1/2 colección</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Ganancia:</strong> Dividida ÷ 2</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Premios:</strong> 2 premios</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÁGINA 2: NIVELES AVANZADOS Y KIT DE BIENVENIDA -->
+    <div class="card-page">
+      <h4 style="margin-top: 0; margin-bottom: 8px; color: #1e3a8a;">🚀 Niveles Avanzados</h4>
+      <div style="display: flex; gap: 10px; margin-bottom: 12px;">
+        <div style="flex: 1; background: #f8fafc; padding: 10px; border-radius: 8px;">
+          <h5 style="margin: 0 0 4px 0; color: #1e3a8a;">3. Asentado</h5>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Volumen:</strong> 1 colección</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Ganancia:</strong> 100% total</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Premios:</strong> 4 o 1 Premio Único</p>
+        </div>
+        <div style="flex: 1; background: #eff6ff; padding: 10px; border-radius: 8px; border: 1px solid #bfdbfe;">
+          <h5 style="margin: 0 0 4px 0; color: #1e3a8a;">4. Élite</h5>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Volumen:</strong> 3 a 5 colecciones</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Regla:</strong> 1 propia + equipo</p>
+          <p style="margin: 2px 0; font-size: 0.82rem;"><strong>Comisión:</strong> 18$ por colección</p>
+        </div>
+      </div>
+
+      <div style="background: #f0fdf4; padding: 12px; border-radius: 8px; border: 1px solid #bbf7d0;">
+        <h5 style="margin: 0 0 4px 0; color: #166534; font-size: 0.9rem;">🎁 Kit de Bienvenida / Adelanto</h5>
+        <p style="margin: 0; font-size: 0.85rem; color: #15803d; line-height: 1.35;">
+          <strong>$100 en productos</strong> para arranque directo comercial.
+          <br><small style="color: #166534;">Complemento de colección: Del 23 al 26.</small>
+        </p>
+      </div>
+    </div>
+
+    <!-- PÁGINA 3: CUARTO DE COLECCIÓN ($121.5) -->
+    <div class="card-page">
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #1e3a8a; color: #fff; padding: 8px 12px; border-radius: 6px; margin-bottom: 10px;">
+        <h4 style="margin: 0; font-size: 0.95rem; color: #ffffff;">Cuarto de Colección</h4>
+        <span style="font-weight: bold; font-size: 1rem; color: #60a5fa;">$121.5</span>
+      </div>
+
+      <div style="background: #f8fafc; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
+        <strong style="font-size: 0.85rem; color: #0f172a;">Contenido (13 Productos Surtidos):</strong>
+        <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: #334155;">Higiene (2), Lavandería (2), Glicerina (2), Concentrados (2), Alivio (1), Solar (1), Alisado (1), Crema (1), Tubo (1).</p>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <div style="flex: 1; background: #f1f5f9; padding: 10px; border-radius: 8px;">
+          <h5 style="margin: 0 0 4px 0; font-size: 0.82rem; color: #334155;">Empresa ($80)</h5>
+          <p style="margin: 0; font-size: 0.8rem;">4 Pagos de $20:<br>• 15/09 &nbsp;• 30/09<br>• 09/10 &nbsp;• 15/10</p>
+        </div>
+        <div style="flex: 1; background: #ecfdf5; padding: 10px; border-radius: 8px; border: 1px solid #a7f3d0;">
+          <h5 style="margin: 0 0 4px 0; color: #065f46;">Emprendedor</h5>
+          <p style="margin: 0; font-size: 0.9rem; font-weight: bold; color: #047857;">Ganancia: +$41.5</p>
+          <span style="display: inline-block; margin-top: 4px; font-size: 0.75rem; background: #10b981; color: white; padding: 2px 6px; border-radius: 4px;">1 Premio Pago Puntual</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÁGINA 4: MEDIA COLECCIÓN ($241.0) -->
+    <div class="card-page">
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #1e3a8a; color: #fff; padding: 8px 12px; border-radius: 6px; margin-bottom: 10px;">
+        <h4 style="margin: 0; font-size: 0.95rem; color: #ffffff;">Media Colección</h4>
+        <span style="font-weight: bold; font-size: 1rem; color: #60a5fa;">$241.0</span>
+      </div>
+
+      <div style="background: #f8fafc; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
+        <strong style="font-size: 0.85rem; color: #0f172a;">Contenido (28 Productos Surtidos):</strong>
+        <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: #334155;">Higiene (3), Lavandería (3), Glicerina (3), Alivio (4), Concentrados (3), Solar (2), Alisados (4), Cremas (2), Tubos (3), Mini Combos (2), Desodorante (1).</p>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <div style="flex: 1; background: #f1f5f9; padding: 10px; border-radius: 8px;">
+          <h5 style="margin: 0 0 4px 0; font-size: 0.82rem; color: #334155;">Empresa ($155)</h5>
+          <p style="margin: 0; font-size: 0.8rem;">5 cuotas de $50 + 1 cuota de $60<br><small style="color: #64748b;">(Del 15/09 al 30/10)</small></p>
+        </div>
+        <div style="flex: 1; background: #ecfdf5; padding: 10px; border-radius: 8px; border: 1px solid #a7f3d0;">
+          <h5 style="margin: 0 0 4px 0; font-size: 0.82rem; color: #065f46;">Emprendedor</h5>
+          <p style="margin: 0; font-size: 0.9rem; font-weight: bold; color: #047857;">Ganancia: +$85.0</p>
+          <span style="display: inline-block; margin-top: 4px; font-size: 0.75rem; background: #10b981; color: white; padding: 2px 6px; border-radius: 4px;">2 Premios Pago Puntual</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÁGINA 5: COLECCIÓN COMPLETA ($482.0) -->
+    <div class="card-page">
+      <div style="display: flex; justify-content: space-between; align-items: center; background: #1e3a8a; color: #fff; padding: 8px 12px; border-radius: 6px; margin-bottom: 10px;">
+        <h4 style="margin: 0; font-size: 0.95rem; color: #ffffff;">Colección Completa</h4>
+        <span style="font-weight: bold; font-size: 1rem; color: #60a5fa;">$482.0</span>
+      </div>
+
+      <div style="background: #f8fafc; padding: 10px; border-radius: 8px; margin-bottom: 10px;">
+        <strong style="font-size: 0.85rem; color: #0f172a;">Contenido (51 Productos Surtidos - Octubre):</strong>
+        <p style="margin: 4px 0 0 0; font-size: 0.8rem; color: #334155;">Higiene (6), Lavandería (6), Glicerina (6), Alivio (7), Concentrados (6), Solar (4), Alisados (4), Cremas (4), Tubos (6), Mini Combos (5).</p>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <div style="flex: 1; background: #f1f5f9; padding: 10px; border-radius: 8px;">
+          <h5 style="margin: 0 0 4px 0; font-size: 0.82rem; color: #334155;">Empresa ($310)</h5>
+          <p style="margin: 0; font-size: 0.8rem;">15/09, 30/09, 09/10, 15/10, 23/10 ($50 ea.) y 30/10 ($60)</p>
+        </div>
+        <div style="flex: 1; background: #ecfdf5; padding: 10px; border-radius: 8px; border: 1px solid #a7f3d0;">
+          <h5 style="margin: 0 0 4px 0; font-size: 0.82rem; color: #065f46;">Emprendedor</h5>
+          <p style="margin: 0; font-size: 0.9rem; font-weight: bold; color: #047857;">Ganancia: +$170.0</p>
+          <span style="display: inline-block; margin-top: 4px; font-size: 0.75rem; background: #10b981; color: white; padding: 2px 6px; border-radius: 4px;">4 Premios Pago Puntual</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLES DE PAGINACIÓN -->
+    <div class="card-pagination">
+      <button class="nav-btn" onclick="changePage(event, this, -1)">❮ Anterior</button>
+      <span class="page-indicator">Página 1 de 5</span>
+      <button class="nav-btn" onclick="changePage(event, this, 1)">Siguiente ❯</button>
+    </div>
+
+  </div>
+</article>
+
+  </div>
+</section>
+<!--CONTACTO-->
+<section class="register-section" id="register-section">
+
+  <div class="section-header">
+    <span class="section-subtitle">Únete al Equipo</span>
+    <h2 class="section-title">Registro de Vendedores</h2>
+    <div class="title-underline"></div>
+  </div>
+
+  <div class="register-card">
+    
+    <div class="form-header">
+      <h2>Registro de Vendedores</h2>
+      <p>Llena tus datos para enviar tu solicitud directamente por WhatsApp.</p>
+    </div>
+
+    <form id="sellerRegisterForm" onsubmit="sendToWhatsApp(event)">
+      <div class="form-grid">
+        
+        <!-- Nombre -->
+        <div class="input-group">
+          <label for="nombre">Nombre *</label>
+          <input type="text" id="nombre" placeholder="Ej. María" required>
+        </div>
+
+        <!-- Apellido -->
+        <div class="input-group">
+          <label for="apellido">Apellido *</label>
+          <input type="text" id="apellido" placeholder="Ej. Pérez" required>
+        </div>
+
+        <!-- Cédula -->
+        <div class="input-group">
+          <label for="cedula">Cédula / ID *</label>
+          <input type="text" id="cedula" placeholder="Ej. V-12345678" required>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="input-group">
+          <label for="telefono">Teléfono *</label>
+          <input type="tel" id="telefono" placeholder="Ej. 04121234567" required>
+        </div>
+
+        <!-- Correo Electrónico -->
+        <div class="input-group full-width">
+          <label for="correo">Correo Electrónico *</label>
+          <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <!-- Fecha de Nacimiento -->
+        <div class="input-group full-width">
+          <label for="fechaNacimiento">Fecha de Nacimiento *</label>
+          <input type="date" id="fechaNacimiento" required>
+        </div>
+
+        <!-- Dirección -->
+        <div class="input-group full-width">
+          <label for="direccion">Dirección Completa *</label>
+          <textarea id="direccion" placeholder="Ciudad, sector, calle, número de casa..." required></textarea>
+        </div>
+
+      </div>
+
+      <!-- Botón de Envío -->
+      <button type="submit" class="submit-btn">
+        Enviar Registro por WhatsApp
+      </button>
+    </form>
+
+  </div>
+</section>
+<!--TESTIMONIOS-->
+<section class="video-section" id="testimonials-section">
+
+  <div class="section-header">
+    <span class="section-subtitle">Conoce los testimonios, productos e incentivos</span>
+    <h2 class="section-title">Centro de Videos y Experiencias</h2>
+    <div class="title-underline"></div>
+  </div>
+
+  <div class="video-container">
+
+    <!-- Pestañas (Tabs) -->
+    <div class="tabs-wrapper">
+      <div class="tabs-navigation">
+        <button class="tab-btn active" onclick="switchTab('testimonios', this)">🎥 Testimonios</button>
+        <button class="tab-btn" onclick="switchTab('productos', this)">📦 Productos</button>
+        <button class="tab-btn" onclick="switchTab('premios', this)">🏆 Premios e Incentivos</button>
+      </div>
+
+      <!-- Filtro de orden -->
+      <div class="filter-wrapper">
+        <label for="videoSort">Ordenar por:</label>
+        <select id="videoSort" onchange="sortVideos(this.value)">
+          <option value="recent">Más recientes</option>
+          <option value="oldest">Más antiguos</option>
+          <option value="popular">Destacados</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- LISTADO DE VIDEOS EN FILAS -->
+    <div class="video-list">
+
+      <!-- Contenido Pestaña 1: Testimonios -->
+      <div class="tab-content active" id="testimonios">
+        
+        <article class="video-row" data-date="2026-09-01" data-popular="5">
+          <div class="video-media">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Testimonio Carlos" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag tag-testimonio">Testimonio VIP</span>
+            <h3 class="video-title">Carlos Mendoza - Plan Diamante</h3>
+            <p class="video-description">
+              "En mi primer mes logré superar mis metas de venta gracias al apoyo del equipo y las capacitaciones continuas."
+            </p>
+            <span class="video-date">Publicado: Septiembre 2026</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Contenido Pestaña 2: Productos -->
+      <div class="tab-content" id="productos">
+        
+        <article class="video-row" data-date="2026-08-15" data-popular="4">
+          <div class="video-media">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demo Producto" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag tag-producto">Demostración</span>
+            <h3 class="video-title">Presentación de Catálogo y Combos</h3>
+            <p class="video-description">
+              Revisión detallada de los productos más vendidos de la temporada y sus beneficios principales para los clientes.
+            </p>
+            <span class="video-date">Publicado: Agosto 2026</span>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Contenido Pestaña 3: Premios -->
+      <div class="tab-content" id="premios">
+        
+        <article class="video-row" data-date="2026-09-10" data-popular="5">
+          <div class="video-media">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Entrega de Premio" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag tag-premio">Incentivo Entregado</span>
+            <h3 class="video-title">Entrega de Kit de Premios Nivel Oro</h3>
+            <p class="video-description">
+              Así fue la entrega del bono especial e incentivos para nuestras vendedoras destacadas del mes.
+            </p>
+            <span class="video-date">Publicado: Septiembre 2026</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<footer class="main-footer">
+  <div class="footer-container">
+    <p class="copyright-text">
+      &copy; Todos los derechos reservados. <strong>Yosmaly Quiaro</strong> - Representante de Ventas de la empresa <strong>CONEICAIDEAL</strong>.
+    </p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
