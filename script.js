@@ -213,3 +213,111 @@ function startCombosSlider() {
 }
 
 document.addEventListener('DOMContentLoaded', startCombosSlider);
+
+// Reemplaza con el número real de WhatsApp de Yosmlay (formato internacional sin +)
+const LEADER_WHATSAPP = "584120000000"; 
+
+const novemberPaymentData = {
+  1:  { dayName: "Domingo 1 de Noviembre",   weekendNum: 1, weekend: "Fin de Semana #1", range: "Cierre de Bloque: Domingo 01/11",         benefit: "Válido para premio de Semana 1", isFinalClosure: false },
+  6:  { dayName: "Viernes 6 de Noviembre",   weekendNum: 2, weekend: "Fin de Semana #2", range: "Bloque de Pago: Viernes 06 al Dom 08/11", benefit: "Apertura de reporte puntual Semana 2", isFinalClosure: false },
+  7:  { dayName: "Sábado 7 de Noviembre",    weekendNum: 2, weekend: "Fin de Semana #2", range: "Bloque de Pago: Viernes 06 al Dom 08/11", benefit: "Jornada regular de abonos Semana 2", isFinalClosure: false },
+  8:  { dayName: "Domingo 8 de Noviembre",   weekendNum: 2, weekend: "Fin de Semana #2", range: "Bloque de Pago: Viernes 06 al Dom 08/11", benefit: "Último día puntual para premio Semana 2", isFinalClosure: false },
+  13: { dayName: "Viernes 13 de Noviembre",  weekendNum: 3, weekend: "Fin de Semana #3", range: "Bloque de Pago: Viernes 13 al Dom 15/11", benefit: "Apertura de reporte puntual Semana 3", isFinalClosure: false },
+  14: { dayName: "Sábado 14 de Noviembre",   weekendNum: 3, weekend: "Fin de Semana #3", range: "Bloque de Pago: Viernes 13 al Dom 15/11", benefit: "Jornada regular de abonos Semana 3", isFinalClosure: false },
+  15: { dayName: "Domingo 15 de Noviembre",  weekendNum: 3, weekend: "Fin de Semana #3", range: "Bloque de Pago: Viernes 13 al Dom 15/11", benefit: "Último día puntual para premio Semana 3", isFinalClosure: false },
+  20: { dayName: "Viernes 20 de Noviembre",  weekendNum: 4, weekend: "Fin de Semana #4", range: "Bloque de Pago: Viernes 20 al Dom 22/11", benefit: "Apertura de reporte puntual Semana 4", isFinalClosure: false },
+  21: { dayName: "Sábado 21 de Noviembre",   weekendNum: 4, weekend: "Fin de Semana #4", range: "Bloque de Pago: Viernes 20 al Dom 22/11", benefit: "Jornada regular de abonos Semana 4", isFinalClosure: false },
+  22: { dayName: "Domingo 22 de Noviembre",  weekendNum: 4, weekend: "Fin de Semana #4", range: "Bloque de Pago: Viernes 20 al Dom 22/11", benefit: "Cierre de ciclo mensual y Premio Único", isFinalClosure: false },
+  27: { dayName: "Viernes 27 de Noviembre",  weekendNum: 5, weekend: "Fin de Semana #5", range: "Bloque de Pago: Viernes 27 al Dom 29/11", benefit: "Cierre administrativo y cuota final", isFinalClosure: true },
+  28: { dayName: "Sábado 28 de Noviembre",   weekendNum: 5, weekend: "Fin de Semana #5", range: "Bloque de Pago: Viernes 27 al Dom 29/11", benefit: "Cierre administrativo y cuota final", isFinalClosure: true },
+  29: { dayName: "Domingo 29 de Noviembre",  weekendNum: 5, weekend: "Fin de Semana #5", range: "Bloque de Pago: Viernes 27 al Dom 29/11", benefit: "Cierre definitivo de mes", isFinalClosure: true }
+};
+
+let currentSelectedDay = 20;
+
+function getDayStatusBadge(dayNum) {
+  const today = new Date();
+  // Si estamos en Noviembre 2026, calculamos diferencia real de días
+  if (today.getFullYear() === 2026 && today.getMonth() === 10) {
+    const currentDay = today.getDate();
+    const diff = dayNum - currentDay;
+
+    if (diff < 0)  return { text: "Fecha cumplida", bg: "#f1f5f9", color: "#64748b" };
+    if (diff === 0) return { text: "¡Hoy toca pago!", bg: "#fef08a", color: "#854d0e" };
+    if (diff === 1) return { text: "Mañana", bg: "#dcfce7", color: "#166534" };
+    return { text: `En ${diff} días`, bg: "#dbeafe", color: "#1e3a8a" };
+  }
+  return { text: "Fecha Oficial", bg: "#dbeafe", color: "#1e3a8a" };
+}
+
+function updateQuotaDisplay() {
+  const selector = document.getElementById('plan-quota-selector');
+  const amountEl = document.getElementById('detail-amount');
+  const waBtn = document.getElementById('whatsapp-report-btn');
+  const info = novemberPaymentData[currentSelectedDay];
+
+  if (!selector || !info) return;
+
+  const selectedAmount = selector.value;
+  amountEl.textContent = `$${selectedAmount}.00 USD`;
+
+  const message = encodeURIComponent(
+    `¡Hola Líder Yosmlay! 👋 Te reporto mi abono correspondiente al *${info.dayName}* (${info.weekend}) por un monto de *$${selectedAmount} USD* en IdealHome.`
+  );
+  waBtn.href = `https://wa.me/${LEADER_WHATSAPP}?text=${message}`;
+}
+
+function selectPaymentDay(element) {
+  const dayNumber = parseInt(element.getAttribute('data-day'), 10);
+  const info = novemberPaymentData[dayNumber];
+  if (!info) return;
+
+  currentSelectedDay = dayNumber;
+
+  // Limpiar estados previos
+  document.querySelectorAll('.calendar-days .weekend-day').forEach(day => {
+    day.classList.remove('active', 'weekend-group-highlight');
+    // Iluminar suavemente el resto del mismo fin de semana
+    if (parseInt(day.getAttribute('data-weekend'), 10) === info.weekendNum) {
+      day.classList.add('weekend-group-highlight');
+    }
+  });
+
+  // Activar el día clicado
+  element.classList.remove('weekend-group-highlight');
+  element.classList.add('active');
+
+  // Actualizar textos del panel
+  document.getElementById('detail-weekend-tag').textContent = info.weekend;
+  document.getElementById('detail-date-title').textContent = info.dayName;
+  document.getElementById('detail-range').textContent = info.range;
+  document.getElementById('detail-benefit').textContent = info.benefit;
+
+  // Actualizar etiqueta de estado / cuenta regresiva
+  const statusBadge = document.getElementById('detail-countdown');
+  const statusInfo = getDayStatusBadge(dayNumber);
+  statusBadge.textContent = statusInfo.text;
+  statusBadge.style.background = statusInfo.bg;
+  statusBadge.style.color = statusInfo.color;
+
+  updateQuotaDisplay();
+}
+
+// Al cargar la página, selecciona automáticamente el próximo día de pago disponible
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date();
+  let defaultDay = 1;
+
+  if (today.getFullYear() === 2026 && today.getMonth() === 10) {
+    const currentDay = today.getDate();
+    const upcomingDays = Object.keys(novemberPaymentData).map(Number).filter(d => d >= currentDay);
+    if (upcomingDays.length > 0) {
+      defaultDay = upcomingDays[0];
+    }
+  }
+
+  const targetElement = document.querySelector(`.calendar-days .weekend-day[data-day="${defaultDay}"]`);
+  if (targetElement) {
+    selectPaymentDay(targetElement);
+  }
+});

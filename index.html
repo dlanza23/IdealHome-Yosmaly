@@ -47,11 +47,11 @@
         <div class="arrow-head"></div>
       </a>
 
-      <!-- Flecha 3: Conecta con el Centro de Videos/Testimonios -->
-      <a href="#testimonials-section" class="nav-arrow arrow-3">
-        <span class="arrow-text">Ver Testimonios</span>
-        <div class="arrow-head"></div>
-      </a>
+<!-- Flecha 3: Conecta con el Calendario de Pagos -->
+<a href="#calendar-section" class="nav-arrow arrow-3">
+  <span class="arrow-text">Fechas de Pago</span>
+  <div class="arrow-head"></div>
+</a>  
     </div>
 
     <!-- Columna Derecha: Identidad de la Marca y Líder -->
@@ -1064,95 +1064,122 @@
   </div>
 </section>
 <!--TESTIMONIOS-->
-<section class="video-section" id="testimonials-section">
+<!-- ==========================================
+    SECCIÓN: CALENDARIO INTERACTIVO DE PAGOS
+    ========================================== -->
+<section class="calendar-section" id="calendar-section">
 
   <div class="section-header">
-    <span class="section-subtitle">Conoce los testimonios, productos e incentivos</span>
-    <h2 class="section-title">Centro de Videos y Experiencias</h2>
+    <span class="section-subtitle">Cronograma Oficial</span>
+    <h2 class="section-title">Fechas de Pago - Noviembre</h2>
     <div class="title-underline"></div>
   </div>
 
-  <div class="video-container">
-
-    <!-- Pestañas (Tabs) -->
-    <div class="tabs-wrapper">
-      <div class="tabs-navigation">
-        <button class="tab-btn active" onclick="switchTab('testimonios', this)">🎥 Testimonios</button>
-        <button class="tab-btn" onclick="switchTab('productos', this)">📦 Productos</button>
-        <button class="tab-btn" onclick="switchTab('premios', this)">🏆 Premios e Incentivos</button>
+  <div class="calendar-wrapper">
+    
+    <!-- Tarjeta Principal del Calendario -->
+    <div class="calendar-card">
+      <div class="calendar-header">
+        <div class="month-info">
+          <h3>Noviembre 2026</h3>
+          <span class="calendar-tag">Fines de semana de cierre</span>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item">
+            <span class="legend-dot weekend-dot"></span> Viernes, Sábado y Domingo
+          </span>
+        </div>
       </div>
 
-      <!-- Filtro de orden -->
-      <div class="filter-wrapper">
-        <label for="videoSort">Ordenar por:</label>
-        <select id="videoSort" onchange="sortVideos(this.value)">
-          <option value="recent">Más recientes</option>
-          <option value="oldest">Más antiguos</option>
-          <option value="popular">Destacados</option>
-        </select>
+      <!-- Cabecera de días de la semana -->
+      <div class="calendar-weekdays">
+        <div>Lun</div>
+        <div>Mar</div>
+        <div>Mié</div>
+        <div>Jue</div>
+        <div class="weekend-label">Vie</div>
+        <div class="weekend-label">Sáb</div>
+        <div class="weekend-label">Dom</div>
+      </div>
+
+      <!-- Cuadrícula de días de Noviembre 2026 (Empieza en Domingo 1) -->
+      <div class="calendar-days" id="november-calendar-days">
+        <!-- Espacios vacíos (Lunes 26 Oct a Sábado 31 Oct) -->
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+        <div class="day empty"></div>
+
+        <!-- Semana 1 -->
+        <div class="day weekend-day active" data-day="1" data-weekend="1" onclick="selectPaymentDay(this)">1</div>
+
+        <!-- Semana 2 -->
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day weekend-day" data-day="6" data-weekend="2" onclick="selectPaymentDay(this)">6</div>
+        <div class="day weekend-day" data-day="7" data-weekend="2" onclick="selectPaymentDay(this)">7</div>
+        <div class="day weekend-day" data-day="8" data-weekend="2" onclick="selectPaymentDay(this)">8</div>
+
+        <!-- Semana 3 -->
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day weekend-day" data-day="13" data-weekend="3" onclick="selectPaymentDay(this)">13</div>
+        <div class="day weekend-day" data-day="14" data-weekend="3" onclick="selectPaymentDay(this)">14</div>
+        <div class="day weekend-day" data-day="15" data-weekend="3" onclick="selectPaymentDay(this)">15</div>
+
+        <!-- Semana 4 -->
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day weekend-day" data-day="20" data-weekend="4" onclick="selectPaymentDay(this)">20</div>
+        <div class="day weekend-day" data-day="21" data-weekend="4" onclick="selectPaymentDay(this)">21</div>
+        <div class="day weekend-day" data-day="22" data-weekend="4" onclick="selectPaymentDay(this)">22</div>
+
+        <!-- Semana 5 -->
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day weekend-day" data-day="27" data-weekend="5" onclick="selectPaymentDay(this)">27</div>
+        <div class="day weekend-day" data-day="28" data-weekend="5" onclick="selectPaymentDay(this)">28</div>
+        <div class="day weekend-day" data-day="29" data-weekend="5" onclick="selectPaymentDay(this)">29</div>
+
+        <!-- Último día -->
+        <div class="day">30</div>
       </div>
     </div>
 
-    <!-- LISTADO DE VIDEOS EN FILAS -->
-    <div class="video-list">
-
-      <!-- Contenido Pestaña 1: Testimonios -->
-      <div class="tab-content active" id="testimonios">
-        
-        <article class="video-row" data-date="2026-09-01" data-popular="5">
-          <div class="video-media">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Testimonio Carlos" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <span class="video-tag tag-testimonio">Testimonio VIP</span>
-            <h3 class="video-title">Carlos Mendoza - Plan Diamante</h3>
-            <p class="video-description">
-              "En mi primer mes logré superar mis metas de venta gracias al apoyo del equipo y las capacitaciones continuas."
-            </p>
-            <span class="video-date">Publicado: Septiembre 2026</span>
-          </div>
-        </article>
-
+    <!-- Tarjeta Lateral de Detalle Interactivo -->
+    <div class="calendar-detail-card" id="payment-detail-panel">
+      <span class="detail-badge" id="detail-weekend-tag">Fin de Semana #1</span>
+      <h3 id="detail-date-title">Domingo 1 de Noviembre</h3>
+      <p class="detail-subtitle" id="detail-range">Bloque de Pago: Domingo 01/11</p>
+      
+      <div class="detail-info-box">
+        <div class="info-row">
+          <strong>📌 Estado de Jornada:</strong>
+          <span id="detail-status">Día habilitado para reportes y abonos</span>
+        </div>
+        <div class="info-row">
+          <strong>🏆 Beneficio Puntualidad:</strong>
+          <span id="detail-benefit">Válido para desbloqueo de premio semanal</span>
+        </div>
+        <div class="info-row">
+          <strong>⏰ Horario de Cierre:</strong>
+          <span>Hasta las 8:00 PM (Reporte con tu Líder VIP)</span>
+        </div>
       </div>
 
-      <!-- Contenido Pestaña 2: Productos -->
-      <div class="tab-content" id="productos">
-        
-        <article class="video-row" data-date="2026-08-15" data-popular="4">
-          <div class="video-media">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Demo Producto" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <span class="video-tag tag-producto">Demostración</span>
-            <h3 class="video-title">Presentación de Catálogo y Combos</h3>
-            <p class="video-description">
-              Revisión detallada de los productos más vendidos de la temporada y sus beneficios principales para los clientes.
-            </p>
-            <span class="video-date">Publicado: Agosto 2026</span>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Contenido Pestaña 3: Premios -->
-      <div class="tab-content" id="premios">
-        
-        <article class="video-row" data-date="2026-09-10" data-popular="5">
-          <div class="video-media">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Entrega de Premio" allowfullscreen></iframe>
-          </div>
-          <div class="video-info">
-            <span class="video-tag tag-premio">Incentivo Entregado</span>
-            <h3 class="video-title">Entrega de Kit de Premios Nivel Oro</h3>
-            <p class="video-description">
-              Así fue la entrega del bono especial e incentivos para nuestras vendedoras destacadas del mes.
-            </p>
-            <span class="video-date">Publicado: Septiembre 2026</span>
-          </div>
-        </article>
-
-      </div>
-
+      <p class="detail-note">
+        💡 <em>Selecciona cualquier día resaltado (Viernes, Sábado o Domingo) en el calendario para verificar los detalles de esa fecha de corte.</em>
+      </p>
     </div>
 
   </div>
